@@ -1,0 +1,16 @@
+
+
+.right_panel_menu img{
+    width: 120px; /* you can use % */
+    height: 120px;
+}
+
+.right_panel_menu{
+  padding-top: 50px;
+  width: 120px;
+  height: 100%;
+  background-color: blue;
+  display: grid;
+  grid-row-gap: 50px;
+  padding-bottom: 1800px;
+}
