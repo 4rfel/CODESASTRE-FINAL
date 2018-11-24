@@ -11,12 +11,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 console.log('9');
 
-document.addEventListener('DOMContentLoaded', function() {
-  var i = 1
-  console.log(i);
-  let test = document.querySelector('.click')
-  if test{
-    i += 1;
-    console.log(i);
-  }
-});
+// document.addEventListener('DOMContentLoaded', function() {
+//   var i = 1
+//   console.log(i);
+//   let test = document.querySelector('.click')
+//   if test{
+//     i += 1;
+//     console.log(i);
+//   }
+// });
