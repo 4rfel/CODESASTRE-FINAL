@@ -44,7 +44,16 @@
   line-height: 80px !important;
 }
 
-.aa{
-  width: 50px !important;
-  height: 50px !important;
+.w300{
+  width: 300px !important;
+}
+.h100{
+  height: 100px !important;
+}
+.head{
+  font-size: 80px !important;
+}
+
+.click:hover{
+  background-color: #d6d6d6
 }
