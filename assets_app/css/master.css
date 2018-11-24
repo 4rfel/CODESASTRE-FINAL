@@ -83,3 +83,11 @@
 .scale10y{
   transform: scaleY(10);
 }
+
+.m-letter{
+  font-size: 40px !important;
+}
+
+.sss-pad-bot{
+  padding-bottom: 10px !important;
+}
