@@ -30,4 +30,15 @@ $(document).ready(function ()
             });
             $(this).addClass('active');
         })
+        $('#submit_quiz').click(function ()
+       {
+           // Desseleciona a resposta selecionada
+           var elements = $('.click');
+           elements.each(function ()
+           {
+               $(this).removeClass('active');
+           });
+
+          // Faz alguma coisa quando clica no botão enviar
+       });
     });
