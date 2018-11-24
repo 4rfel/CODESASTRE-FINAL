@@ -93,3 +93,25 @@
 .sss-pad-bot{
   padding-bottom: 10px !important;
 }
+
+.sss-pad-top{
+  padding-top: 40px !important;
+}
+
+
+ul.high-score
+        {
+            list-style : none;
+        }
+
+        ul.high-score li
+        {
+            border-bottom  : solid 1px #bbb;
+            margin         : 15px 0;
+            padding-bottom : 15px;
+        }
+
+        ul.high-score:first-child
+        {
+            border-top  : solid 1px #bbb;
+        }
