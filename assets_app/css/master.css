@@ -62,7 +62,7 @@
   font-size: 80px !important;
 }
 
-.click:active{
+..click:hover,.click.active{
   background-color: #d6d6d6
 }
 
