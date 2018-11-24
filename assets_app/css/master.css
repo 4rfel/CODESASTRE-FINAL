@@ -78,9 +78,9 @@
   margin-top: 200px !important;
 }
 
-.scale2{
+/* .scale2{
   transform: scale(3);
-}
+} */
 
 .scale10y{
   transform: scaleY(10);
