@@ -75,3 +75,11 @@
 .marg-top{
   margin-top: 100px !important;
 }
+
+.scale2{
+  transform: scale(2);
+}
+
+.scale10y{
+  transform: scaleY(10);
+}
