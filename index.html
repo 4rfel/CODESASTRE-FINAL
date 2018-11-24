@@ -15,7 +15,7 @@
         <!-- Text written on the browser's tab -->
         <title>CarQuiz</title>
     </head><!-- Compiled and minified CSS -->
-  <script type="text/javascript" src="assets_app\scripts\dropdown.js"></script>
+  <script src="assets_app\scripts\dropdown.js"></script>
 
 
   <body class='white-smoke'>
@@ -40,37 +40,81 @@
   <div class="row">
         <div class="col s8 offset-s3">
           <!-- Dropdown Trigger -->
-<a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
+            <a class='dropdown-trigger btn w-100p h100 large-letter pad-top-s' href='#' data-target='dropdown1'>Tipo carro 1</a>
+            <!-- Dropdown Structure -->
+            <ul id='dropdown1' class='dropdown-content w300 h100'>
+                <form action="#">
+                    <label>
+                        <input type="checkbox" class="filled-in">
+                        <span>Marca 1</span>
+                    </label>
+                  </p>
+                </form>
+                <form action="#">
+                    <label>
+                        <input type="checkbox" class="filled-in" />
+                        <span>Marca 2</span>
+                    </label>
+                  </p>
+                </form>
+            </ul>
 
-<!-- Dropdown Structure -->
-<ul id='dropdown1' class='dropdown-content'>
-  <li><a href="#!">one</a></li>
-  <li><a href="#!">two</a></li>
-  <li class="divider" tabindex="-1"></li>
-  <li><a href="#!">three</a></li>
-  <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-  <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-</ul>
-          <!-- <form action="#">
-              <label>
-                <input type="checkbox" class="filled-in">
-                <span>1</span>
-              </label>
-            </p>
-          </form>
-          <form action="#">
-                <label>
-                  <input type="checkbox" class="filled-in" />
-                  <span>2</span>
-                </label>
-              </p>
-            </form> -->
+          </div>
+        </div>
+
+  <div class="row">
+        <div class="col s8 offset-s3">
+          <a class='dropdown-trigger btn w-100p h100 large-letter pad-top-s' href='#' data-target='dropdown2'>Tipo carro 2</a>
+          <!-- Dropdown Structure -->
+          <ul id='dropdown2' class='dropdown-content w300 h100'>
+              <form action="#">
+                  <label>
+                      <input type="checkbox" class="filled-in">
+                      <span>Marca 1</span>
+                  </label>
+                </p>
+              </form>
+              <form action="#">
+                  <label>
+                      <input type="checkbox" class="filled-in" />
+                      <span>Marca 2</span>
+                  </label>
+                </p>
+              </form>
+
+        </ul>
+
+          </div>
+        </div>
+
+  <div class="row">
+        <div class="col s8 offset-s3">
+          <a class='dropdown-trigger btn w-100p h100 large-letter pad-top-s' href='#' data-target='dropdown3'>Tipo carro 3</a>
+          <!-- Dropdown Structure -->
+          <ul id='dropdown3' class='dropdown-content w300 h100'>
+              <form action="#">
+                  <label>
+                      <input type="checkbox" class="filled-in">
+                      <span>Marca 1</span>
+                  </label>
+                </p>
+              </form>
+              <form action="#">
+                  <label>
+                      <input type="checkbox" class="filled-in" />
+                      <span>Marca 2</span>
+                  </label>
+                </p>
+              </form>
+
+        </ul>
+
           </div>
         </div>
 
     <div class="row">
       <div class="col s8 offset-s3">
-          <p class="flow-text large-letter pad">% de Novidades</p>
+          <p class="flow-text large-letter pad center">% de Novidades</p>
           <form action="#">
               <p class="range-field">
                   <input type="range" min="0" max="100">

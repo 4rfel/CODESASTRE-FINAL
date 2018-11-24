@@ -36,12 +36,20 @@
   padding-top: 80px !important;
 }
 
+.pad-top-s{
+  padding-top: 30px !important;
+}
+
 .pad-bottom{
   padding-bottom: 200px !important;
 }
 
 .line-space{
   line-height: 80px !important;
+}
+
+.w-100p{
+    width: 100% !important;
 }
 
 .w300{
