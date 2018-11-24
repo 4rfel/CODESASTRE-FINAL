@@ -9,14 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
   var instances = M.Datepicker.init(elems);
 });
 
-console.log('9');
 
-// document.addEventListener('DOMContentLoaded', function() {
-//   var i = 1
-//   console.log(i);
-//   let test = document.querySelector('.click')
-//   if test{
-//     i += 1;
-//     console.log(i);
-//   }
-// });
+var i = 0
+function evento(){
+  i += 1
+  console.log(i);
+}
