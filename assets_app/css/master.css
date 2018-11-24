@@ -55,14 +55,16 @@
 .w300{
   width: 300px !important;
 }
+
 .h100{
   height: 100px !important;
 }
+
 .head{
   font-size: 80px !important;
 }
 
-..click:hover,.click.active{
+.click:hover,.click.active{
   background-color: #d6d6d6
 }
 
