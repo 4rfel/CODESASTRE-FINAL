@@ -1,7 +1,29 @@
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.datepicker');
   var instances = M.Datepicker.init(elems);
+
+
+
+  // let name = document.querySelector('.name')
+  // name.innerHTML = "nome sério"
+
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // let db = new DB('https://co-des.firebaseio.com')
+    let db = new DB('https://co-des-site.firebaseio.com')
+
+
+    db.download(db, function(data) {
+        // Printing the data contained on that path on firebase
+        console.log(data)
+
+    })
+})
+
+// https://desgosto-final.firebaseio.com/
+
 
 
 var i = 1

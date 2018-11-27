@@ -2,6 +2,11 @@
    font-size: 55px !important;
 }
 
+.border{
+  border-width: thin;
+  border-color: black;
+}
+
 .centralize{
   justify-content: center !important;
 }
