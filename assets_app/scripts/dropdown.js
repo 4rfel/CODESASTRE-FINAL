@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     // let db = new DB('https://co-des.firebaseio.com')
-    let db = new DB('https://co-des-site.firebaseio.com')
+    let db = new DB('https://desgosto-final.firebaseio.com/')
 
 
     db.download(db, function(data) {
