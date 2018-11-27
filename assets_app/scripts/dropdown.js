@@ -79,6 +79,13 @@ $(document).ready(function ()
             pergunta.innerHTML = data["pergunta "+(i)]['respostas'][0]
             // console.log(data["pergunta "+(i)]['pergunta'])
 
-          
+            let pontos = document.querySelector('.pontos')
+            var pontuacao = 0
+            if(resp_dada == data['certa']){
+              pontuacao += 10;
+            }
+            pontos.innerHTML = "Pontos: " + pontuacao
+
+
         })
     })
