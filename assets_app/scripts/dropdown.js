@@ -53,6 +53,7 @@ $(document).ready(function ()
 
         db.download("/", function(data)
         {
+          console.log(data);
           console.log('resp:');
           console.log(data['perguntas'][num_pergunta]['resposta_correta']);
             $('.pergunta').html(data["perguntas"][num_pergunta]['pergunta']);
