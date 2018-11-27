@@ -49,7 +49,7 @@ $(document).ready(function ()
         // Carrega quiz
         var num_pergunta = 1;
         var pontos = 0;
-        let db = new DB('https://desgosto-final.firebaseio.com/')
+        let db = new DB('https://coisa-62403.firebaseio.com/')
 
         db.download("/", function(data)
         {
