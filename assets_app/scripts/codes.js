@@ -1,25 +1,35 @@
 class DB {
-    constructor(url) {
-        firebase.initializeApp({databaseURL: url})
-        this.database = firebase.database()
+  constructor(url) {
+    firebase.initializeApp({databaseURL: url})
+    this.database = firebase.database()
   }
 
-    download(endpoint, callback) {
-        this.database.ref(endpoint).once('value')
-            .then(function(snapshot) {
-                callback(snapshot.val())
-            })
-    }
+  download(endpoint, callback) {
+    this.database.ref(endpoint).once('value')
+      .then(function(snapshot) {
+        callback(snapshot.val())
+      })
+  }
 }
 
 
-class TP {
-    constructor(id) {
-        let source = document.querySelector('#' + id).innerHTML
-        this.template = Handlebars.compile(source)
-    }
+function connect(url) {
+  return new DB(url)
+}
 
-    generate(context) {
-        return this.template(context)
-    }
+
+function replace(selector, context) {
+  let element = document.querySelector(selector)
+  let template = Handlebars.compile(element.innerHTML)
+  element.innerHTML = template(context)
+}
+
+
+function extract() {
+  let searchParams = new URLSearchParams(window.location.search)
+  let params = {}
+  for(let pair of searchParams) {
+    params[pair[0]] = pair[1]
+  }
+  return params
 }
