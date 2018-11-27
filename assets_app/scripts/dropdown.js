@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-var i = 1
+var i = 0
 function evento(){
   i += 1
   console.log(i);
@@ -95,7 +95,7 @@ $(document).ready(function ()
           ;
             // Incrementa pergunta
             num_pergunta += 1;
-            $('.souburro').html("Questão número: " + (num_pergunta + 1));
+            // $('.souburro').html("Questão número: " + (num_pergunta));
 
             // Desseleciona a resposta selecionada
             var elements = $('.click');
