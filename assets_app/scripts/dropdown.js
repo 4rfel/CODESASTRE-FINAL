@@ -2,16 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.datepicker');
   var instances = M.Datepicker.init(elems);
 
-  // let db = new DB('https://desgosto-final.firebaseio.com/')
-  //
-  //
-  // db.download(db, function(data) {
-  //     // Printing the data contained on that path on firebase
-  //     console.log(data)
-  //
-  // // let name = document.querySelector('.name')
-  // // name.innerHTML = "nome sério"
-  // });
 });
 
 
@@ -47,6 +37,7 @@ $(document).ready(function ()
            });
 
           // Faz alguma coisa quando clica no botão enviar
+          console.log('e');
        });
        $('.dropdown-trigger').dropdown({
             closeOnClick: false,
@@ -68,28 +59,26 @@ $(document).ready(function ()
             // Printing the data contained on that path on firebase
             console.log(data)
 
-            if(migue == 1){
-              console.log('qq');
-                var migue = 0;
-                let resp1 = document.querySelector('.resp1')
-                resp1.innerHTML = data["pergunta "+(i)]['respostas'][0]
-                // console.log(data["pergunta "+(i)]['respostas'][0])
+            let resp1 = document.querySelector('.resp1')
+            resp1.innerHTML = data["pergunta "+(i)]['respostas'][0]
+            // console.log(data["pergunta "+(i)]['respostas'][0])
 
-                let resp2 = document.querySelector('.resp2')
-                resp2.innerHTML = data["pergunta "+(i)]['respostas'][1]
-                // console.log(data["pergunta "+(i)]['respostas'][1])
+            let resp2 = document.querySelector('.resp2')
+            resp2.innerHTML = data["pergunta "+(i)]['respostas'][1]
+            // console.log(data["pergunta "+(i)]['respostas'][1])
 
-                let resp3 = document.querySelector('.resp3')
-                resp3.innerHTML = data["pergunta "+(i)]['respostas'][2]
-                // console.log(data["pergunta "+(i)]['respostas'][2])
+            let resp3 = document.querySelector('.resp3')
+            resp3.innerHTML = data["pergunta "+(i)]['respostas'][2]
+            // console.log(data["pergunta "+(i)]['respostas'][2])
 
-                let resp4 = document.querySelector('.resp4')
-                resp4.innerHTML = data["pergunta "+(i)]['respostas'][3]
-                // console.log(data["pergunta "+(i)]['respostas'][3])
+            let resp4 = document.querySelector('.resp4')
+            resp4.innerHTML = data["pergunta "+(i)]['respostas'][3]
+            // console.log(data["pergunta "+(i)]['respostas'][3])
 
-                let pergunta = document.querySelector('.pergunta')
-                pergunta.innerHTML = data["pergunta "+(i)]['respostas'][0]
-                // console.log(data["pergunta "+(i)]['pergunta'])
-          }
+            let pergunta = document.querySelector('.pergunta')
+            pergunta.innerHTML = data["pergunta "+(i)]['respostas'][0]
+            // console.log(data["pergunta "+(i)]['pergunta'])
+
+          
         })
     })
