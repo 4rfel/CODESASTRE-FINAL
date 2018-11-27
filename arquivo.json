@@ -1,0 +1,104 @@
+{
+    "perguntas": {
+        "1": {
+            "pergunta": "Qual é o torque fornecido por um chevrolet camaro fifty 6.2 v8?",
+            "resposta_correta": 1,
+            "respostas": [
+                "27,17 kg/kgfm",
+                "22,27 kg/kgfm",
+                "28,27 kg/kgfm",
+                "31,14 kg/kgfm"
+            ]
+        },
+        "3": {
+            "pergunta": "Qual a potencia da nova C180 ?",
+            "resposta_correta": 4,
+            "respostas": [
+                "115 cv",
+                "143 cv",
+                "180 cv",
+                "156 cv"
+            ]
+        },
+        "2": {
+            "pergunta": "Qual carro possui maior número de cavalos?",
+            "resposta_correta": 4,
+            "respostas": [
+                "Mercedes-Benz C180",
+                "BMW 320i",
+                "Audi A4",
+                "Toyota Camry"
+            ]
+        },
+        "10": {
+            "pergunta": "pergunta muito s\u00e9ria sobre carros 3",
+            "resposta_correta": 2,
+            "respostas": [
+                " 1",
+                " 2",
+                " 3",
+                " 4"
+            ]
+        },
+        "4": {
+            "pergunta": "pergunta muito s\u00e9ria sobre carros 4",
+            "resposta_correta": 4,
+            "respostas": [
+                " 1",
+                " 2",
+                " 3",
+                " 4"
+            ]
+        },
+        "5": {
+            "pergunta": "pergunta muito s\u00e9ria sobre carros 5",
+            "resposta_correta": 1,
+            "respostas": [
+                " 1",
+                " 2",
+                " 3",
+                " 4"
+            ]
+        },
+        "6": {
+            "pergunta": "pergunta muito s\u00e9ria sobre carros 6",
+            "resposta_correta": 3,
+            "respostas": [
+                " 1",
+                " 2",
+                " 3",
+                " 4"
+            ]
+        },
+        "7": {
+            "pergunta": "pergunta muito s\u00e9ria sobre carros 7",
+            "resposta_correta": 4,
+            "respostas": [
+                " 1",
+                " 2",
+                " 3",
+                " 4"
+            ]
+        },
+        "8": {
+            "pergunta": "pergunta muito s\u00e9ria sobre carros 8",
+            "resposta_correta": 2,
+            "respostas": [
+                " 1",
+                " 2",
+                " 3",
+                " 4"
+            ]
+        },
+        "9": {
+            "pergunta": "pergunta muito s\u00e9ria sobre carros 9",
+            "resposta_correta": 3,
+            "respostas": [
+                " 1",
+                " 2",
+                " 3",
+                " 4"
+            ]
+        }
+    }
+}
