@@ -16,14 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-var i = 1
-function evento(){
-  i += 1
-  console.log(i);
-  let questao = document.querySelector('.souburro')
-  questao.innerHTML = "Questão número: " + i
 
-}
 
 
 $(document).ready(function ()
