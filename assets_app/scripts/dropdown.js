@@ -37,7 +37,6 @@ $(document).ready(function ()
            });
 
           // Faz alguma coisa quando clica no botão enviar
-          console.log('e');
        });
        $('.dropdown-trigger').dropdown({
             closeOnClick: false,
@@ -45,42 +44,77 @@ $(document).ready(function ()
     });
 
 
-
-    document.addEventListener('DOMContentLoaded', function() {
-        // let db = new DB('https://co-des.firebaseio.com')
+    $(document).ready(function ()
+    {
+        // Carrega quiz
+        var num_pergunta = 1;
+        var pontos = 0;
         let db = new DB('https://desgosto-final.firebaseio.com/')
 
-        db.download("/", function(data) {
-            // Printing the data contained on that path on firebase
-            console.log(data)
+        db.download("/", function(data)
+        {
+          console.log('resp:');
+          console.log(data['perguntas'][num_pergunta]['resposta_correta']);
+            $('.pergunta').html(data["perguntas"][num_pergunta]['pergunta']);
+            $('.resp1').html(data["perguntas"][num_pergunta]['respostas'][0]);
+            $('.resp2').html(data["perguntas"][num_pergunta]['respostas'][1]);
+            $('.resp3').html(data["perguntas"][num_pergunta]['respostas'][2]);
+            $('.resp4').html(data["perguntas"][num_pergunta]['respostas'][3]);
+        });
+        $('.sidebarCollapse').click(function ()
+        {
+            $('.sidebar').toggleClass('active');
+        });
 
-            let resp1 = document.querySelector('.resp1')
-            resp1.innerHTML = data["pergunta "+(i)]['respostas'][0]
-            // console.log(data["pergunta "+(i)]['respostas'][0])
+        $('.click').click(function ()
+        {
+            var elements = $('.click');
+            elements.each(function ()
+            {
+                $(this).removeClass('selected');
+            });
+            $(this).addClass('selected');
+        });
 
-            let resp2 = document.querySelector('.resp2')
-            resp2.innerHTML = data["pergunta "+(i)]['respostas'][1]
-            // console.log(data["pergunta "+(i)]['respostas'][1])
+        $('#submit_quiz').click(function ()
+        {
+          db.download("/", function(data){
+            // Verifica resposta correta
+            var resposta_correta = data['perguntas'][num_pergunta]['resposta_correta'];
+            var answer = $(document).find('.selected').data('id');
+            console.log('certa: ' + resposta_correta);
+            console.log('dada: ' + answer);
+            if (resposta_correta === answer)
+            {
+              console.log('acertou');
+                pontos += 1;
+                $('.pontos').html("Pontos: " + pontos);
+              };
 
-            let resp3 = document.querySelector('.resp3')
-            resp3.innerHTML = data["pergunta "+(i)]['respostas'][2]
-            // console.log(data["pergunta "+(i)]['respostas'][2])
+            });
+          ;
+            // Incrementa pergunta
+            num_pergunta += 1;
+            $('.souburro').html("Questão número: " + (num_pergunta + 1));
 
-            let resp4 = document.querySelector('.resp4')
-            resp4.innerHTML = data["pergunta "+(i)]['respostas'][3]
-            // console.log(data["pergunta "+(i)]['respostas'][3])
+            // Desseleciona a resposta selecionada
+            var elements = $('.click');
+            elements.each(function ()
+            {
+                $(this).removeClass('selected');
+            });
+            db.download("/", function(data){
+              console.log('resp:');
+              console.log(data['perguntas'][num_pergunta]['resposta_correta']);
+            $('.pergunta').html(data["perguntas"][num_pergunta]['pergunta']);
+            $('.resp1').html(data["perguntas"][num_pergunta]['respostas'][0]);
+            $('.resp2').html(data["perguntas"][num_pergunta]['respostas'][1]);
+            $('.resp3').html(data["perguntas"][num_pergunta]['respostas'][2]);
+            $('.resp4').html(data["perguntas"][num_pergunta]['respostas'][3]);
+          });
+        });
 
-            let pergunta = document.querySelector('.pergunta')
-            pergunta.innerHTML = data["pergunta "+(i)]['respostas'][0]
-            // console.log(data["pergunta "+(i)]['pergunta'])
-
-            let pontos = document.querySelector('.pontos')
-            var pontuacao = 0
-            if(resp_dada == data['certa']){
-              pontuacao += 10;
-            }
-            pontos.innerHTML = "Pontos: " + pontuacao
-
-
-        })
-    })
+        $('.dropdown-trigger').dropdown({
+            closeOnClick: false,
+        });
+    });
