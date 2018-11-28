@@ -5,18 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
-var i = 0
-function evento(){
-  i += 1
-  console.log(i);
-  let questao = document.querySelector('.souburro')
-  questao.innerHTML = "Questão número: " + i
-
-}
-
-
-
 $(document).ready(function ()
     {
         $('.click').click(function ()
@@ -53,9 +41,7 @@ $(document).ready(function ()
 
         db.download("/", function(data)
         {
-          console.log(data);
-          console.log('resp:');
-          console.log(data['perguntas'][num_pergunta]['resposta_correta']);
+          // console.log(data['perguntas'][num_pergunta]['resposta_correta']);
             $('.pergunta').html(data["perguntas"][num_pergunta]['pergunta']);
             $('.resp1').html(data["perguntas"][num_pergunta]['respostas'][0]);
             $('.resp2').html(data["perguntas"][num_pergunta]['respostas'][1]);
@@ -81,8 +67,9 @@ $(document).ready(function ()
         {
           db.download("/", function(data){
             // Verifica resposta correta
-            var resposta_correta = data['perguntas'][num_pergunta]['resposta_correta'];
-            var answer = $(document).find('.selected').data('id');
+            var resposta_correta = data['perguntas'][num_pergunta-1]['resposta_correta'];
+
+            var answer = $(document).find('.selected').data("id");
             console.log('certa: ' + resposta_correta);
             console.log('dada: ' + answer);
             if (resposta_correta === answer)
@@ -96,7 +83,7 @@ $(document).ready(function ()
           ;
             // Incrementa pergunta
             num_pergunta += 1;
-            // $('.souburro').html("Questão número: " + (num_pergunta));
+            $('.souburro').html("Questão número: " + (num_pergunta));
 
             // Desseleciona a resposta selecionada
             var elements = $('.click');
@@ -105,8 +92,6 @@ $(document).ready(function ()
                 $(this).removeClass('selected');
             });
             db.download("/", function(data){
-              console.log('resp:');
-              console.log(data['perguntas'][num_pergunta]['resposta_correta']);
             $('.pergunta').html(data["perguntas"][num_pergunta]['pergunta']);
             $('.resp1').html(data["perguntas"][num_pergunta]['respostas'][0]);
             $('.resp2').html(data["perguntas"][num_pergunta]['respostas'][1]);
